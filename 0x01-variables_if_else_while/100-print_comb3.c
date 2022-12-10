@@ -7,10 +7,9 @@
   */
 int main(void)
 {
-	int d;
-        int i;
+	int d, i;
 
-	for (d = '0'; d <= '9'; d++)
+	for (d = '0'; d <= '9'; c++)
 	{
 		for (i = '0'; i <= '9'; i++)
 		{
@@ -19,7 +18,7 @@ int main(void)
 				putchar(d);
 				putchar(i);
 
-				if (d != '8' || (d == '8' && i != '9'))
+				if (c != '8' || (c == '8' && i != '9'))
 				{
 					putchar(',');
 					putchar(' ');
