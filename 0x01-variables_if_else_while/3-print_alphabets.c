@@ -3,20 +3,20 @@
 /**
  * main - Prints the alphabetic in lower and upper case
  *
- * Return: Always (Success)
+ * Return: 0
  */
 int main(void)
 {
-	char c;
+	char i;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		putchar(c);
+		putchar(i);
 	}
 
-	for (c = 'A'; c <= 'Z'; c++)
+	for (i = 'A'; i <= 'Z'; i++)
 	{
-		putchar(c);
+		putchar(i);
 	}
 
 	putchar('\n');
