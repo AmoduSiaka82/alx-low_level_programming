@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-  * main - Prints a hexadecimal string
+  * main - Print hexadecimal string
   *
-  * Return: 0 
+  * Return: 0
   */
 int main(void)
 {
