@@ -1,10 +1,17 @@
 #include "main.h"
 /**
- * main - prints _putchar.
+ * main - prints the string "School" from a character array.
  * Return: 0
  */
 int main(void)
 {
-        printf('_putchar'\n');
+	char c[] = "School";
+	int i;
+
+	for (i = 0; i < 6; i++)
+	{
+		_putchar(c[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
