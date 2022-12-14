@@ -2,7 +2,7 @@
 /**
  * print_last_digit - prints the last digit of a number.
  * @n: digit to find the last place of.
- * Return: Last digit.
+ * Return: The last digit.
  */
 int print_last_digit(int n)
 {
@@ -10,6 +10,7 @@ int print_last_digit(int n)
 	{
 		n = n * -1;
 	}
-	_putchar((n % 10));
-	return (n % 10 + '0');
+	_putchar((n % 10) + '0');
+	return (n % 10);
 }
+
