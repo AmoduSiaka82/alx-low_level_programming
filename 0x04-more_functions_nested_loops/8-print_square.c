@@ -3,7 +3,7 @@
 /**
  * print_square - a function that prints a square, followed by a new line
  * @size: size of both width and length
- * Return: a square made of '@'
+ * Return: a square made of '#'
  */
 void print_square(int size)
 {
@@ -17,10 +17,10 @@ void print_square(int size)
 	{
 		for (c = 1; c <= size; c++)
 		{
-			_putchar('@');
+			_putchar('#');
 			for (r = 2; r <= size; r++)
 			{
-				_putchar('@');
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
