@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * puts2 - function should print only one character out of two
@@ -8,12 +8,12 @@
  */
 void puts2(char *str)
 {
-	int i = 0;
+	int n = 0;
 
-	for (; str[i] != '\0'; i++)
+	for (; str[n] != '\0'; n++)
 	{
-		if ((i % 2) == 0)
-			_putchar(str[i]);
+		if ((n % 2) == 0)
+			_putchar(str[n]);
 		else
 			continue;
 	}
