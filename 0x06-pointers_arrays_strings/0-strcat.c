@@ -1,28 +1,22 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-  * _strcat - Concatenates two strings
-  * @dest: The destination string
-  * @src: The source string
-  *
-  * Return: string dest
-  */
+ * _strcat - a function that concatenates two strings
+ * @dest: copy to
+ * @src: copy from
+ * Return: concat strings
+ */
 char *_strcat(char *dest, char *src)
 {
-	int dln = 0, i;
 
-	while (dest[dln])
+	int i, n;
+
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		dln++;
 	}
 
-	for (i = 0; src[i] != 0; i++)
+	for (n = 0; (dest[i + n] = *src++) != '\0'; n++)
 	{
-		dest[dln] = src[i];
-		dln++;
 	}
-
-	dest[dln] = '\0';
 	return (dest);
 }
