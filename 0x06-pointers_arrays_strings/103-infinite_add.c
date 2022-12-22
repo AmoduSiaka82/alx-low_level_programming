@@ -1,21 +1,32 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * infinite_add - add two string numbers
- * @n1: string number to add to n2
- * @n2: string number to add to n1
- * @r: buffer to store the sum
- * @size_r: size of buffer
- * return: pointer to sum or 0 if it does not fit in r
+ * infinite_add - adds arbitrarily long string of digits
+ * @n1: the first digit string
+ * @n2: the second digit string
+ * @r: the result buffer
+ * @size_r: the size of result buffer
+ *
+ * Return: char pointer to buffer
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1 = 0, len2 = 0, lenS = 0;
-	
-	while (*(n1 + len1++))
-		;
-	while (*(n2 + len2++))
-		;
-	printf("%d, %d\n", len1, len2);
-	return (r);
+	int l1 = _strlen(n1), l2 = _strlen(n2), i = 0, a, b, c = 0;
+
+	for (l1--, l2--, size_r--; l1 >= 0 || l2 >= 0 || c; l1--, l2--, i++)
+	{
+		if (i >= size_r)
+			return (0);
+		a = 0;
+		b = 0;
+		if (l1 >= 0)
+			a = n1[l1] - '0';
+		if (l2 >= 0)
+			b = n2[l2] - '0';
+		a = a + b + c;
+		c = a / 10;
+		a %= 10;
+		r[i] = a + '0';
+	}
+	r[i] = '\0';
+	return (rev_string(r));
 }
