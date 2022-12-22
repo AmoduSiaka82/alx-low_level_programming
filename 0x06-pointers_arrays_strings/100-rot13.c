@@ -1,25 +1,28 @@
 #include "main.h"
 
 /**
-  * print_number - Prints any integer with putchar
-  * @n: Number to prints
-  *
-  * Return: None
-  */
-void print_number(int n)
+ * rot13 - Entry point
+ * Desc: Entry
+ *@r: pointer
+ * Return: 0
+ */
+char *rot13(char *r)
 {
-	unsigned int x;
+	int i;
+	int j;
+	char k[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char n[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	if (n < 0)
+	for (i = 0 ; *(r + i) != '\0' ; i++)
 	{
-		_putchar('-');
-		n *= -1;
+		for (j = 0 ; k[j] != '\0'; j++)
+		{
+			if (*(r + i) == k[j])
+			{
+				*(r + i) = n[j];
+				break;
+			}
+		}
 	}
-
-	x = n;
-
-	if (x / 10)
-		print_number(x / 10);
-
-	_putchar(x % 10 + '0');
+	return (r);
 }
